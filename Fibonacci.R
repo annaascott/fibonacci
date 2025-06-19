@@ -19,3 +19,13 @@ fibonacci_recursive <- function(n) {
 library(assertthat)
 assert_that(fibonacci_recursive(1) == 0)
 
+library(tidyverse)
+
+df <- tibble(
+  x = 1:40,
+  y = sapply(1:40, fibonacci_recursive)
+)
+
+
+
+
